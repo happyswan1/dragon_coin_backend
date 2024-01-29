@@ -100,8 +100,12 @@ public class TestController {
 
         PdfBoxUtil.writePdfFile("C:/Users/qiwang/Desktop/WqFiles/" + fileName, content);
 
-
+        String str=testOverLoad("a","a","c","d");
         return fileName;
+    }
+
+    public String testOverLoad(String paramA,String ...paramB){
+        return "hello from test overload";
     }
     private void saveFile(String toString, String fileName) {
         FileWriter fileWriter = null;

@@ -19,17 +19,17 @@ public class UserController {
         return userService.getById(id);
     }
 
-    @PostMapping
-    public boolean addUser(@RequestBody DragonUser dragonUser) {
-        return userService.save(dragonUser);
-    }
+//    @PostMapping
+//    public boolean addUser(@RequestBody DragonUser dragonUser) {
+//        return userService.save(dragonUser);
+//    }
+//
+//    @PostMapping
+//    public boolean updateUser(@RequestBody DragonUser dragonUser) {
+//        return userService.updateById(dragonUser);
+//    }
 
-    @PutMapping
-    public boolean updateUser(@RequestBody DragonUser dragonUser) {
-        return userService.updateById(dragonUser);
-    }
-
-    @DeleteMapping("/{id}")
+    @PostMapping("/delete/{id}")
     public boolean deleteUser(@PathVariable Long id) {
         return userService.removeById(id);
     }

@@ -28,9 +28,10 @@ public class CoinController {
         return coinService.updateById(coin);
     }
 
-    @DeleteMapping("/{id}")
-    public boolean deleteCoin(@PathVariable Long id) {
-        return coinService.removeById(id);
+    @PostMapping("/delete/{id}")
+    public boolean deleteCoin(@PathVariable String id) {
+        Long longId = Long.parseLong(id);
+        return coinService.removeById(longId);
     }
 
     @GetMapping("/page")
